@@ -5,25 +5,30 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"> 
+	<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- siempre mi hoja de estilos va de ultimo-->
 </head>
 <body>
+	<header class="site-header inicio"> <!-- se nombra header (logotipo, nombre y navegacion) porque es el contenido superior de la pag--> <!-- se seleccionó 2 clases, id solo se puede seleccionar 1 solo -->
+		<div class="contenedor"> <!--se nombra div para agrupar el contenido pero complementa al header-->
+			<div class="barra">
+				<a href="/">
+					<img src="img/logo.svg" alt="Logotipo de bienes raices">
+				</a>
 
-	<header>
-		<a href="/">
-		<img src="img/logo.svg" alt="Logotipo de bienes raices">
-		</a>
-
-		<nav>
-			<a target="_blank" href="nosotros.html">Nosotros</a>
-			<a href="anuncios.html">Anuncios</a>
-			<a href="blog.html">Blog</a>
-			<a target="_self"href="contacto.html">Contacto</a>
-		</nav>
-
-		<h1>Venta de Casas y Departamentos Exclusivos</h1>
+				<nav class="navegacion">
+					<a target="_blank" href="nosotros.html">Nosotros</a>
+					<a href="anuncios.html">Anuncios</a>
+					<a href="blog.html">Blog</a>
+					<a target="_self"href="contacto.html">Contacto</a>
+				</nav>
+			</div>
+			<h1>Venta de Casas y Departamentos Exclusivos</h1>
+		</div> <!-- fin del contenedor -->
 	</header>
 
-	<section>
+	<section> <!-- se nombra section pq comienza con un heading y se cambia de contenido-->
 		<h2>Mas sobre nosotros</h2>
 
 		<div>
@@ -48,7 +53,7 @@
 		</div>
 	</section>
 
- 	<main>
+ 	<main> <!--se nombra main pq es el contenido principal de la pag-->
 		<h2>Casas y Depas en Venta</h2>
 
 		<div>
@@ -84,10 +89,10 @@
 		<a href="contacto.html">Contactanos</a>
 	</section>
 
-	<section>
+	<section> 
 		<h3>Nuestro blog</h3>
 
-		<article>
+		<article> <!--se usa article cuando el elemento habla por si mismo, tiene significado propio (se usa para cada una entrada de blog-->
 			<img src="img/blog1.jpg" alt="Entrada de blog">
 			<h4>Terraza en el techo de tu casa</h4>
 			<p>Escrito el: <em>20/10/2019</em> por: <em>Admin</em></p>
@@ -102,7 +107,7 @@
 		</article>
 	</section>
 
-	<section>
+	<section> 
 		<h3>Testimoiales</h3>
 		<blockquote>
 		El personal se comporto de una excelente forma, muy buena atencion y la casa que me ofrecieron cumple con todas mis expectativas.
@@ -110,8 +115,8 @@
 		<p>- Diego Sánchez</p>
 	</section>
 
-	<footer>
-		<nav>
+	<footer> <!-- se nombra footer pq es pie de pag -->
+		<nav class="navegacion"> <!-- se nombra asi a la parte de navegacion de la pag -->
 			<a target="_blank" href="nosotros.html">Nosotros</a>
 			<a href="anuncios.html">Anuncios</a>
 			<a href="blog.html">Blog</a>
