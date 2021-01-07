@@ -5,10 +5,45 @@ html {
 body {
     font-family: 'Oswald', sans-serif;
     font-size: 1.6rem;
+    line-height: 2;
 }
-.contenedor { /** Globales **/
+
+/** Globales **/
+.contenedor {
 	max-width: 120rem; /* = 1200px */ /*toma todo el espacio disponible siempre y no se pase de 1200px*/
 	margin: 0 auto; /* para que este centrado el contenido en lo que es de pagina */
+}
+
+/** Sistema de tamaños **/
+
+h1 {  
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {    
+	font-size: 2.6rem;
+}
+
+/** Utilidades **/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 { /* Para poner la fuente en 300 */
+    font-weight: 300; 
+}
+
+.centrar-texto { /* Para centrar el texto */
+    text-align: center;
 }
 
 /* Header */
@@ -17,12 +52,26 @@ body {
 	background-position: center center; /* Para mostrar la imagen desde el centro */
 	background-size: cover; /* Para que tome el alto y ancho disponible, pero guardando las proporciones*/
 	height: 100vh; /* Para agregar la toda la altura de pantalla */
-	min-height: 60rem; /* Para agregar la altura min */
+	min-height: rem; /* Para agregar la altura min */
+}
+
+.contenido-header {
+    height: 100%; /* toma toda la altura del header */
+    display: flex; /* habilita las direcciones del elemento */
+    flex-direction: column; /* Como puse aquí la direccion de flex vertical */
+    justify-content: space-between; /* esto lo voy a mover en sentido vertical, align seria para moverlo horizontal */
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem; /* Padding es espacio hacia adentro del elemento, marging es espacio con otro elemento */
+    max-width: 45rem; /* Para cortar el texto y que continue en la sig linea */
+    line-height: 1.7; /* interlineado */
 }
 
 .barra {
 	display: flex; /* Para empezar a utilizarlo como flex */
-	justify-content: space-between; /*Para alinearlo el logo a la izquieda y el nav a la derecha*/
+	justify-content: space-between; /*Para alinearlo el logo y el nav horizontalmente*/
 	padding-top: 3rem; /* Para agregar una separacion y empujar hacia abajo el logo*/
     align-items: center; /** Para alinear verticalmente los elementos **/
 }
@@ -31,7 +80,7 @@ body {
 .navegacion a { /* selecciona a todos los "a" de la clase navegacion */
 	color: white; /* el rgba usa transparencia y el hsla tambien */
 	text-decoration: none; /* le quita la linea abajo al texto */
-	font-size: 2.5rem;
+	font-size: 2rem;
 	margin-right: 2rem; /* separando cada uno de los elementos */
 }
 
@@ -42,3 +91,40 @@ body {
 .navegacion a:last-of-type { /*es un peudo selector que le quita el margen al ultimo elemento */ 
 	margin-right: 0;
 }
+
+/** Iconos nosotros */
+.encabezado-nosotros {
+    text-align: center;
+    font-weight: 300; /* Para cambiarle la grosor de la letra */
+}
+
+.iconos-nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc(33.3%  - 1rem); /** Para darle tamaño especifico a cada "icono nosotros" y se usa % por el responsive design */
+    text-align: center; /* Para centrar los iconos y texto */
+}
+
+.icono h3 {
+    text-transform: uppercase; /* Para ponerlo en mayusculas, capitalize es para poner cada letra en mayus */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

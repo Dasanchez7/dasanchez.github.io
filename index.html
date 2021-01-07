@@ -11,7 +11,7 @@
 </head>
 <body>
 	<header class="site-header inicio"> <!-- se nombra header (logotipo, nombre y navegacion) porque es el contenido superior de la pag--> <!-- se seleccionó 2 clases, id solo se puede seleccionar 1 solo -->
-		<div class="contenedor"> <!--se nombra div para agrupar el contenido pero complementa al header-->
+		<div class="contenedor contenido-header"> <!--se nombra div para agrupar el contenido pero complementa al header--> <!-- flex solo tomara en cuenta al primer nivel de hijos (barra y venta de casas y depar) -->
 			<div class="barra">
 				<a href="/">
 					<img src="img/logo.svg" alt="Logotipo de bienes raices">
@@ -24,33 +24,35 @@
 					<a target="_self"href="contacto.html">Contacto</a>
 				</nav>
 			</div>
-			<h1>Venta de Casas y Departamentos Exclusivos</h1>
+			<h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
 		</div> <!-- fin del contenedor -->
 	</header>
 
-	<section> <!-- se nombra section pq comienza con un heading y se cambia de contenido-->
-		<h2>Mas sobre nosotros</h2>
+	<section class="contenedor seccion"> <!-- se nombra section pq comienza con un heading y se cambia de contenido-->
+		<h2 class="fw-300 centrar-texto">Más sobre nosotros</h2>
+        
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="img/icono1.svg" alt="Icono seguridad">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
 
-		<div>
-			<img src="img/icono1.svg" alt="Icono seguridad">
-			<h3>Seguridad</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
+            <div class="icono">
+                <img src="img/icono2.svg" alt="Icono mejor precio">
+                <h3>El mejor precio</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
 
-		<div>
-			<img src="img/icono2.svg" alt="Icono mejor precio">
-			<h3>El mejor precio</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
-		
-		<div>
-			<img src="img/icono3.svg" alt="Icono a tiempo">
-			<h3>A tiempo</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
+            <div class="icono">
+                <img src="img/icono3.svg" alt="Icono a tiempo">
+                <h3>A tiempo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
 	</section>
 
  	<main> <!--se nombra main pq es el contenido principal de la pag-->
@@ -108,7 +110,7 @@
 	</section>
 
 	<section> 
-		<h3>Testimoiales</h3>
+		<h3>Testimoniales</h3>
 		<blockquote>
 		El personal se comporto de una excelente forma, muy buena atencion y la casa que me ofrecieron cumple con todas mis expectativas.
 		</blockquote>
