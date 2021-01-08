@@ -9,12 +9,16 @@ body {
 }
 
 /** Globales **/
+img {
+    max-width: 100%; /** Hace que las imagenes sean responsivas, las adapta al contenedor **/
+}
 .contenedor {
 	max-width: 120rem; /* = 1200px */ /*toma todo el espacio disponible siempre y no se pase de 1200px*/
 	margin: 0 auto; /* para que este centrado el contenido en lo que es de pagina */
 }
 
 /** Sistema de tamaños **/
+/** los <p> tiene un default de font-weight de 400 y los <h1> de 700 **/
 
 h1 {  
     font-size: 3.8rem;
@@ -45,6 +49,33 @@ h4 {
 .centrar-texto { /* Para centrar el texto */
     text-align: center;
 }
+
+.d-block {
+    display: block!important;
+}
+/** Botones **/
+
+.boton {
+    color:aliceblue;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.boton-amarillo {
+    background-color: #E08709;
+}
+
+.boton-verde {
+    background-color: #71B100;
+}
+
+
+
 
 /* Header */
 .site-header.inicio {
@@ -112,15 +143,36 @@ h4 {
     text-transform: uppercase; /* Para ponerlo en mayusculas, capitalize es para poner cada letra en mayus */
 }
 
+/*Anuncios */
+.contenedor-anuncios{
+    display: flex;
+    justify-content: space-between;
+}
 
+.anuncio {
+    flex-basis: calc(33.3% - 1rem);
+    border-style: solid;
+    border: 1px solid #b5b5b5; /* primero el tamaño, 2do el tipo, 3ro el color */
+    background-color: #f5f5f5;
+}
 
+.contenido-anuncio {
+    padding: 2rem;
+}
+ 
+.contenido-anuncio h3, .contenido-anuncio p { /*Para quitar el margen por defecto de arriba que tenia el heading y el texto */
+    margin: 0;
+}
+ 
+.precio {
+    color: #5e9a02;
+    font-weight: 700; 
+}
 
-
-
-
-
-
-
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
 
 
 
