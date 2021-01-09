@@ -205,3 +205,59 @@ h4 {
 .contenido-contacto p {
 	font-size: 2.5rem;
 }
+
+/* seccion inferior  */
+
+.seccion-inferior {
+	display: flex;
+	justify-content: space-between;
+}
+
+.seccion-inferior .blog {
+	flex-basis: 60%; /* hara que ocupe el 60% del espacio */
+}
+
+.seccion-inferior .testimoniales {
+	flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {  /* cada entrada de articulo */
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+}
+
+.entrada-blog:last-of-type {
+	margin-bottom: 0;
+}
+
+.entrada-blog .imagen {
+	flex-basis: 40%
+}
+
+.entrada-blog .texto-entrada {
+	flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada a {
+	color: black;
+	text-decoration: none;
+}
+
+.texto-entrada h4 {
+	margin: 0;
+	line-height: 1.5;
+}
+
+.texto-entrada h4::after {
+	content: ''; /* Creacion de un pseudo-elemento, es aquel q no se puede seleccionar */
+	display: block;
+	width: 15rem;
+	height: .5rem;
+	background-color: #8bc34a;
+	margin-top: .7rem;
+}
+
+.texto-entrada span {
+	color: orange;
+}
