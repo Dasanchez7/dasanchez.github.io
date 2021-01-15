@@ -9,6 +9,7 @@ body {
 }
 
 /** Globales **/
+
 img {
     max-width: 100%; /** Hace que las imagenes sean responsivas, las adapta al contenedor **/
 }
@@ -37,6 +38,7 @@ h4 {
 }
 
 /** Utilidades **/
+
 .seccion {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -52,6 +54,10 @@ h4 {
 
 .d-block {
     display: block!important;
+}
+
+.contenido-centrado {
+	max-width: 800px; /* Para el que el contenido no sea tan acho */
 }
 /** Botones **/
 
@@ -75,7 +81,13 @@ h4 {
 }
 
 /* Header */
-.site-header.inicio {
+
+.site-header {
+	background-color: #333333;
+	padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio { /* este solo aplica cuando el contenedor tenga las 2 clases juntas */
 	background-image: url(../img/header.jpg); /* para agregar la imagen de fondo */
 	background-position: center center; /* Para mostrar la imagen desde el centro */
 	background-size: cover; /* Para que tome el alto y ancho disponible, pero guardando las proporciones*/
@@ -105,6 +117,7 @@ h4 {
 }
 
 /** Navegacion **/
+
 .navegacion a { /* selecciona a todos los "a" de la clase navegacion */
 	color: white; /* el rgba usa transparencia y el hsla tambien */
 	text-decoration: none; /* le quita la linea abajo al texto */
@@ -121,6 +134,7 @@ h4 {
 }
 
 /** Iconos nosotros */
+
 .encabezado-nosotros {
     text-align: center;
     font-weight: 300; /* Para cambiarle la grosor de la letra */
@@ -141,16 +155,24 @@ h4 {
 }
 
 /* Anuncios */
+
 .contenedor-anuncios{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* posiciona para abajo los otros 3 anuncios (viene en default:no wrap) */
 }
 
-.anuncio {
-    flex-basis: calc(33.3% - 1rem);
+.anuncio { /* este hijo es el que define el tamaño */
+	flex: 0 0 calc(33.3% - 1rem);
+	/*
+	flex-grow: 0; -- esto hace que si hay la posibilidad de agrandar el contenido lo haga
+	flex-shrink: 0; -- esto hace que no se encoja el contenido si es posible y seleccion el de flex-basis (viene en default:1) 
+	flex-basis: calc(33.3% - 1rem) -- esta es tamaño base del contenido;
+	*/
     border-style: solid;
     border: 1px solid #b5b5b5; /* primero el tamaño, 2do el tipo, 3ro el color */
     background-color: #f5f5f5;
+    margin-bottom: 2rem; /* separacion entre la mitad de los anuncios */
 }
 
 .contenido-anuncio {
@@ -171,6 +193,8 @@ h4 {
 	padding: 0; /* le quita el margen por defecto */
 	display: flex;
 	justify-content: space-evenly;
+	flex: 1; /* Para que agrende los iconos de la pag anuncio pq el contenido se comprime*/
+	max-width: 500px;
 }
 
 .iconos-caracteristicas li {
@@ -206,7 +230,7 @@ h4 {
 	font-size: 2.5rem;
 }
 
-/* seccion inferior  */
+/* Seccion inferior  */
 
 .seccion-inferior {
 	display: flex;
@@ -260,4 +284,75 @@ h4 {
 
 .texto-entrada span {
 	color: orange;
+}
+
+.testimonial {
+	background-color: #67bd03;
+	font-size: 2.4rem;
+	padding: 2rem;
+	color: #f7f7f7;
+	border-radius: 2rem;
+}
+
+.testimonial p {
+	text-align: right;
+	font-weight: 700;
+}
+
+.testimonial blockquote:before {  /* Para crear un pseudo elemento antes del testimonial (comillas) */
+	content: ''; 
+	background-image: url(../img/comilla.svg); /* Para crear un pseudo elemento tengo que darle un tamaño) */
+	width: 4rem;  /* Si doy un acho y un largo, necesito darle un display block*/
+	height: 4rem;
+	position: absolute; /* es absolute pq va a permitir poner una posicion especifica */
+	left: -1rem;
+}
+
+.testimonial blockquote {
+	position: relative; /*es relative pq es el padre, la comilla (es un hijo)  se va declara despues de el pero si posiciona antes*/
+	padding-left: 5rem;
+}
+
+/*Footer*/
+
+.site-footer {
+	background-color: #333333;
+	margin: 0;
+}
+
+.contenedor-footer {
+	padding: 3rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.copyright {
+	margin: 0;
+	color: white;
+}
+
+/* Paginas Internas */
+/* Nosotros */
+.contenido-nosotros {
+	display: grid; /* divide el contenido segun cuantos hijos se tengan */
+	grid-template-columns: repeat(2, 1fr); /* divide el contenido (imagen y texto) en 2 columnas 50% para una y 50% para otra */
+	grid-column-gap: 2rem; /* para dar separacion entre columnas */
+}
+
+.texto-nosotros blockquote {
+	font-weight: 900;
+	font-size: 2rem;
+	margin: 0; /* para quitar el margen de la izquierda que trae por defecto */
+	padding: 3rem 0;
+}
+
+.imagen img {
+	border-radius: 1rem;
+}
+
+/* Anuncio */
+.resumen-propiedad {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
